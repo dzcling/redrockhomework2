@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lv2</title>
+</head>
+
+<body>
+
+    <div>
+        <b>请选择您的爱好</b>
+        <br />
+    </div>
+
+    <div id="divlist">
+        <input type="checkbox" value="内卷" class="box">内卷
+        <input type="checkbox" value="疯狂内卷" class="box">疯狂内卷
+        <input type="checkbox" value="拼命内卷" class="box">拼命内卷
+        <input type="checkbox" value="使劲内卷" class="box">使劲内卷
+        <br />
+        <input type="button" id="allt" value="全选">
+        <input type="button" id="no" value="全不选">
+        <input type="button" id="op" value="反选">
+    </div>
+    <script>
+        let boxs = document.getElementsByClassName('box');
+        let  al = document.querySelector('#allt');
+        let  no = document.getElementById('no');
+        let  op = document.getElementById('op');
+        al.onclick = function() {
+            let flag=1
+            for ( let i=0; i<boxs.length;i++)
+            {
+          boxs[i].checked =true ;
+          
+            }
+         }
+         no.onclick = function() {
+            for ( let i=0; i<boxs.length;i++)
+            {
+          boxs[i].checked = '' ;
+            }
+         }
+         op.onclick = function() {
+            for (let i=0;i<boxs.length;i++){
+                  if(boxs[i].checked == false){
+                    boxs[i].checked =true ;
+                  }
+                     else {
+                        boxs[i].checked =false;
+                     }
+            }
+         }
+    </script>  
+
+
+
+
+</body>
+
+</html>
