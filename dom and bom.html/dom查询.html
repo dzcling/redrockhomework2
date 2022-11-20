@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload=function(){
+           //为id为btn01的按钮绑定单击响应函数
+           const btn01=doucument.getElementById("btn01");
+           btn01.onclick=function(){
+             // 查找id为xx的节点
+             const xx=document.getElementById("xx");
+             alert(xx.innerHTML);
+           };
+
+        //    为id为btn02的按钮绑定一个单击响应函数
+        const btn02=document.getElementById("btn02");
+        btn02.onclick=function(){
+            // 查找所有li节点
+            const xx=document.getElementsByTagName("xx");
+            for(let i=0;i<xx.length;i++){
+                alert(xx[i].innerHTML);
+            }
+        };
+        //为id为btn03的按钮绑定一个单击响应函数
+        const btn03=document.getElementById("btn03");
+        btn03.onclick=function(){
+            //查找name=xx的所有结点
+            const xx=document.getElementsByName("xx");
+            for(let i=0;i<xx.length;i++){
+                // alert(xx[i].innerHTML);
+                alert(xx[i].value);
+                //innerHTML对于自结束标签没有意义
+                // 读取元素节点属性，可直接使用元素.属性名
+                // 例：元素.id 元素.name 元素.value
+                // 唯独class不一样，class是js的关键字，所以要用className
+            }
+        };
+
+        };
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

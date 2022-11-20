@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 基本数据类型：一共五种
+        // 引用数据：object
+        // js中的变量都是保存到栈内存中的
+        // 基本数据类型的值直接在栈内存中存储
+        // 至于值之间是独立存在，修改一个变量不会影响他的变量
+        对象是保存到堆内存中的，每创建一个新的对象，就会在堆内存中开辟出一个新的空间，变量保存的是地址，
+        如果两个变量保存的是同一个对象引用，当一个受到影响时，两个都受到影响。
+        当修改其中一个的值时，只会断开它一个的连接。
+        堆内存的内容可以相同，但是地址不同。
+        var a=123;
+        var b=a;
+        a++;
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
